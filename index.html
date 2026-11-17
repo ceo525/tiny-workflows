@@ -1,0 +1,77 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Tiny Workflows: small tools that take one chore off your plate</title>
+<meta name="description" content="Small, single-purpose tools for solo workers. Open a file, use it, keep your data on your own device. No account, no subscription.">
+<style>
+  :root { --ink:#1d2433; --muted:#5b6475; --line:#e3e6ec; --bg:#fbfaf7; --card:#ffffff; --accent:#1f6f5c; --accent-ink:#ffffff; --tag:#fff4d6; --tag-ink:#6b4e00; }
+  * { box-sizing:border-box; }
+  body { margin:0; font:17px/1.6 system-ui, -apple-system, "Segoe UI", Roboto, sans-serif; color:var(--ink); background:var(--bg); }
+  a { color:var(--accent); }
+  a:focus-visible, button:focus-visible { outline:3px solid #f2b705; outline-offset:2px; }
+  .wrap { max-width:880px; margin:0 auto; padding:0 20px; }
+  header { padding:28px 0 0; }
+  .brand { font-weight:700; letter-spacing:.2px; font-size:18px; }
+  .hero { padding:48px 0 32px; }
+  h1 { font-size:clamp(30px, 5vw, 44px); line-height:1.15; margin:0 0 16px; }
+  .lede { font-size:19px; color:var(--muted); max-width:640px; margin:0 0 24px; }
+  .btn { display:inline-block; background:var(--accent); color:var(--accent-ink); text-decoration:none; padding:12px 20px; border-radius:8px; font-weight:600; }
+  h2 { font-size:24px; margin:40px 0 16px; }
+  .grid { display:grid; grid-template-columns:repeat(auto-fit, minmax(240px, 1fr)); gap:16px; }
+  .card { background:var(--card); border:1px solid var(--line); border-radius:12px; padding:20px; }
+  .card h3 { margin:6px 0 8px; font-size:20px; }
+  .card p { margin:0 0 10px; color:var(--muted); }
+  .tag { display:inline-block; background:var(--tag); color:var(--tag-ink); font-size:13px; font-weight:600; padding:2px 10px; border-radius:999px; }
+  ul.plain { padding-left:20px; margin:0; }
+  ul.plain li { margin:6px 0; }
+  details { background:var(--card); border:1px solid var(--line); border-radius:10px; padding:12px 16px; margin:10px 0; }
+  summary { cursor:pointer; font-weight:600; }
+  footer { border-top:1px solid var(--line); margin-top:48px; padding:24px 0 40px; color:var(--muted); font-size:15px; }
+</style>
+</head>
+<body>
+<header class="wrap"><div class="brand">Tiny Workflows</div></header>
+
+<main class="wrap">
+  <section class="hero">
+    <h1>Small tools that take one chore off your plate.</h1>
+    <p class="lede">Each tool does one job for people who work on their own: freelancers, makers, small shops. You open it in your browser and use it. No account to create, no monthly fee, and your records stay on your own device.</p>
+    <a class="btn" href="#tools">See the tools</a>
+  </section>
+
+  <section id="tools">
+    <h2>Tools</h2>
+    <div class="grid">
+      <article class="card">
+        <span class="tag">In testing, on sale soon</span>
+        <h3>Freelancer Invoice Chaser</h3>
+        <p>See at a glance which clients still owe you, what is overdue and what is due soon. Mark invoices paid, copy a polite follow-up message, and back up your list to a file.</p>
+        <p>Works offline in your browser. It does not send emails, take payments or do accounting.</p>
+      </article>
+    </div>
+  </section>
+
+  <section>
+    <h2>How every tool works</h2>
+    <ul class="plain">
+      <li><strong>One file, one job.</strong> You get a file you open in Chrome, Edge, Safari or Firefox. Nothing to install.</li>
+      <li><strong>Your data stays with you.</strong> Records are saved in the browser on your device. Nothing is uploaded to us.</li>
+      <li><strong>Back up in one click.</strong> Export a backup file and import it again on another device.</li>
+      <li><strong>Pay once.</strong> No subscription. A plain one-page setup guide comes with each tool.</li>
+    </ul>
+  </section>
+
+  <section>
+    <h2>Questions</h2>
+    <details><summary>Do I need to be technical?</summary><p>No. If you can open a file and fill in a form, you can use these tools. Each one ships with a one-page guide.</p></details>
+    <details><summary>Where is my data stored?</summary><p>In your browser on the device you use. It does not sync between devices on its own; use the backup file to move it. Clearing your browser data removes it, so keep a backup.</p></details>
+    <details><summary>How do I pay and get the tool?</summary><p>Each tool page has a secure card checkout run by Stripe. Card details never touch this site. The download link arrives after payment.</p></details>
+    <details><summary>Who do I contact for help?</summary><p>Open a request on our <a href="https://github.com/ceo525/tiny-workflows/issues">support page</a>. An email address will be listed here before the first tool goes on sale.</p></details>
+  </section>
+</main>
+
+<footer class="wrap">Tiny Workflows. Small tools for people who work on their own.</footer>
+</body>
+</html>
