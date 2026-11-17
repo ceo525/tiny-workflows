@@ -1,0 +1,129 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Stream Widget Kit: countdown, goal bar and Starting Soon screen for OBS | Tiny Workflows</title>
+<meta name="description" content="A countdown, a goal bar you move from an OBS dock, and Starting Soon / Be Right Back / Ending screens. Set up from a form, no code, no account. $5, one time.">
+<style>
+  :root { --ink:#1d2433; --muted:#5b6475; --line:#e3e6ec; --bg:#fbfaf7; --card:#ffffff; --accent:#1f6f5c; --accent-ink:#ffffff; }
+  * { box-sizing:border-box; }
+  body { margin:0; font:17px/1.6 system-ui, -apple-system, "Segoe UI", Roboto, sans-serif; color:var(--ink); background:var(--bg); }
+  a { color:var(--accent); }
+  a:focus-visible { outline:3px solid #f2b705; outline-offset:2px; }
+  .wrap { max-width:880px; margin:0 auto; padding:0 20px; }
+  header { padding:28px 0 0; }
+  .brand { font-weight:700; font-size:18px; text-decoration:none; color:var(--ink); }
+  .hero { padding:40px 0 24px; display:grid; gap:24px; grid-template-columns:1fr; }
+  @media (min-width:760px) { .hero { grid-template-columns:3fr 2fr; align-items:start; } }
+  h1 { font-size:clamp(30px, 5vw, 44px); line-height:1.15; margin:0 0 16px; }
+  .lede { font-size:19px; color:var(--muted); margin:0 0 20px; }
+  .btn { display:inline-block; background:var(--accent); color:var(--accent-ink); text-decoration:none; padding:14px 22px; border-radius:8px; font-weight:700; font-size:18px; }
+  .facts { background:var(--card); border:1px solid var(--line); border-radius:12px; padding:18px 20px; }
+  .facts ul { list-style:none; padding:0; margin:12px 0 0; font-size:15px; }
+  .facts li { padding:6px 0; border-top:1px solid var(--line); }
+  .price { font-size:32px; font-weight:800; }
+  h2 { font-size:24px; margin:40px 0 14px; }
+  img.shot { width:100%; height:auto; border:1px solid var(--line); border-radius:10px; background:#fff; }
+  .two { display:grid; grid-template-columns:1fr; gap:16px; }
+  @media (min-width:640px) { .two { grid-template-columns:1fr 1fr; } }
+  ul.plain { padding-left:20px; margin:0; } ul.plain li { margin:6px 0; }
+  details { background:var(--card); border:1px solid var(--line); border-radius:10px; padding:12px 16px; margin:10px 0; }
+  summary { cursor:pointer; font-weight:600; }
+  footer { border-top:1px solid var(--line); margin-top:48px; padding:24px 0 40px; color:var(--muted); font-size:15px; }
+</style>
+</head>
+<body>
+<header class="wrap"><a class="brand" href="../../">Tiny Workflows</a></header>
+
+<main class="wrap">
+  <section class="hero">
+    <div>
+      <h1>A countdown, a goal bar and your Starting Soon screen, set up in five minutes.</h1>
+      <p class="lede">For streamers who want their scene to look finished without editing code or paying a monthly fee. Fill in a form, watch the preview, press Copy, paste the address into OBS.</p>
+      <a class="btn" href="https://buy.stripe.com/aFa8wRar42dcguQ9Pd7wA0I">Buy Stream Widget Kit for $5</a>
+    </div>
+    <aside class="facts" aria-label="Product facts">
+      <div class="price">$5 <span style="font-size:16px;font-weight:600;color:var(--muted)">one time</span></div>
+      <ul>
+        <li>Format: a ZIP folder of offline widgets plus a setup page (about 15 KB)</li>
+        <li>Works in: OBS Studio as a Browser Source (tested in OBS 33 on Windows)</li>
+        <li>Payment: one time, no subscription, no account</li>
+        <li>Background: transparent, so widgets sit on top of your scene</li>
+        <li>Use: any stream, monetised streams included</li>
+      </ul>
+    </aside>
+  </section>
+
+  <img class="shot" src="04-setup-page-1280x720.png" width="1280" height="720" alt="The setup page: pick Countdown, Goal bar or Scenes, fill in the form, see a live preview and copy the address for OBS">
+
+  <h2>You'll like this if</h2>
+  <ul class="plain">
+    <li>You want a Starting Soon screen with a real countdown instead of a still image.</li>
+    <li>You want a sub or donation goal bar on screen without signing up for another service.</li>
+    <li>You tried a widget before and gave up on editing the file or following the readme.</li>
+  </ul>
+  <p><strong>Not for you if</strong> you need follow, sub or chat alerts, sounds, or anything that reads your Twitch account. This kit does none of that.</p>
+
+  <h2>With the Stream Widget Kit you can</h2>
+  <ul class="plain">
+    <li>Run a countdown for a number of minutes or to a clock time, with your own end text such as "We're live!".</li>
+    <li>Show a goal bar with your label, amount and target, and move it during the stream from a small control panel docked inside OBS. The bar updates without a reload.</li>
+    <li>Put up Starting Soon, Be Right Back or Ending screens with your title, subtitle and socials line.</li>
+    <li>Pick one of three looks, Neon, Pastel or Minimal, so every widget matches.</li>
+    <li>Run two goals at once by giving each its own Goal ID.</li>
+  </ul>
+
+  <div class="two" style="margin-top:20px">
+    <img class="shot" src="01-starting-scene-1920x1080.png" width="1920" height="1080" alt="Starting soon screen in the Neon look with a 05:00 countdown and a socials line">
+    <img class="shot" src="03-goal-bar-1280x720.png" width="1280" height="720" alt="Goal bar shown over a sample stream background">
+  </div>
+
+  <h2>Set up in 4 steps</h2>
+  <ol>
+    <li>Pay, press <strong>Download ZIP</strong> on your download page, and unzip it to a folder that will stay put.</li>
+    <li>Double-click <code>setup.html</code>. It opens in your browser.</li>
+    <li>Pick a widget, fill in the form, watch the preview, press <strong>Copy</strong>.</li>
+    <li>In OBS: Sources, +, Browser. Paste the address into URL and set the size shown under the preview.</li>
+  </ol>
+
+  <h2>What you get</h2>
+  <ul class="plain">
+    <li>Countdown, goal bar, goal control panel and scene screens</li>
+    <li>The setup page that makes your OBS addresses</li>
+    <li>Three matching looks for every widget</li>
+    <li>A plain setup guide and a licence for use on any stream</li>
+  </ul>
+
+  <h2>If something goes wrong</h2>
+  <ul class="plain">
+    <li><strong>Refund:</strong> if it does not work in your setup, ask within 14 days of purchase and you get your money back.</li>
+    <li><strong>Help:</strong> open a request on our <a href="https://github.com/ceo525/tiny-workflows/issues">support page</a>. Requests there are public, so never post card details or order numbers.</li>
+    <li><strong>Limits:</strong> the control panel only reaches the goal bar when both run inside OBS (the panel as a Custom Browser Dock). A minutes countdown restarts when OBS reloads the source; a clock-time countdown does not.</li>
+  </ul>
+
+  <h2>Questions</h2>
+  <details><summary>How do I get it after paying?</summary><p>Stripe sends you straight to your download page. Bookmark it, press <strong>Download ZIP</strong>, unzip, and open <code>setup.html</code>. Lost the page? Open a support request and we will send the link again.</p></details>
+  <details><summary>Does it work in Streamlabs?</summary><p>We have tested it in OBS Studio only. Streamlabs Desktop also takes Browser Sources, but we have not checked it there. If it does not work for you, ask for a refund.</p></details>
+  <details><summary>Do I need an account or a server?</summary><p>No. Everything runs from the folder on your computer.</p></details>
+  <details><summary>Will the goal bar update by itself from Twitch?</summary><p>No. You move it with the control panel during the stream.</p></details>
+  <details><summary>Can I use it on a monetised stream?</summary><p>Yes. You may not resell or share the files.</p></details>
+
+  <p style="margin-top:32px"><a class="btn" href="https://buy.stripe.com/aFa8wRar42dcguQ9Pd7wA0I">Buy Stream Widget Kit for $5</a></p>
+</main>
+
+<footer class="wrap">Tiny Workflows. Licence: use on any stream, including monetised; do not resell or share the files. Payments are handled by Stripe; card details never touch this site.</footer>
+<script>
+/* Visit and buy-click counters (Abacus counting API, https://github.com/JasonLovesDoggo/abacus). No cookies, no personal data sent from this page. */
+(function(){
+  var base="https://abacus.jsn.cam/hit/tiny-workflows-ceo525/";
+  function hit(k){try{fetch(base+k,{mode:"cors",cache:"no-store",keepalive:true}).catch(function(){});}catch(e){}}
+  hit("widget-kit-view");
+  document.addEventListener("click",function(ev){
+    var a=ev.target&&ev.target.closest?ev.target.closest('a[href*="buy.stripe.com"]'):null;
+    if(a){hit("widget-kit-buy-click");}
+  },true);
+})();
+</script>
+</body>
+</html>
