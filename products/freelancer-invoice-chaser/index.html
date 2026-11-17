@@ -111,5 +111,17 @@
 </main>
 
 <footer class="wrap">Tiny Workflows. Personal-use licence: use it for your own work; do not resell or share the file. Payments are handled by Stripe; card details never touch this site.</footer>
+<script>
+/* Visit and buy-click counters (Abacus counting API, https://github.com/JasonLovesDoggo/abacus). No cookies, no personal data sent from this page. */
+(function(){
+  var base="https://abacus.jsn.cam/hit/tiny-workflows-ceo525/";
+  function hit(k){try{fetch(base+k,{mode:"cors",cache:"no-store",keepalive:true}).catch(function(){});}catch(e){}}
+  hit("due-list-view");
+  document.addEventListener("click",function(ev){
+    var a=ev.target&&ev.target.closest?ev.target.closest('a[href*="buy.stripe.com"]'):null;
+    if(a){hit("due-list-buy-click");}
+  },true);
+})();
+</script>
 </body>
 </html>
