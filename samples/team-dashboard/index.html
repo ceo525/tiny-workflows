@@ -1,0 +1,52 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Sample: team productivity dashboard in Excel | Tiny Workflows</title>
+<meta name="description" content="A walkthrough of a sample team productivity dashboard built from a plain task tracker: who is on schedule, which milestones are slipping, hours by owner. Excel and Google Sheets, no macros.">
+<style>
+  :root { --ink:#1d2433; --muted:#5b6475; --line:#e3e6ec; --bg:#fbfaf7; --card:#ffffff; --accent:#1f6f5c; }
+  * { box-sizing:border-box; }
+  body { margin:0; font:17px/1.6 system-ui, -apple-system, "Segoe UI", Roboto, sans-serif; color:var(--ink); background:var(--bg); }
+  a { color:var(--accent); }
+  .wrap { max-width:880px; margin:0 auto; padding:0 20px; }
+  header { padding:28px 0 0; }
+  .brand { font-weight:700; font-size:18px; text-decoration:none; color:var(--ink); }
+  h1 { font-size:clamp(28px, 5vw, 40px); line-height:1.15; margin:36px 0 14px; }
+  .lede { font-size:19px; color:var(--muted); margin:0 0 24px; }
+  h2 { font-size:23px; margin:36px 0 12px; }
+  img.shot { width:100%; height:auto; border:1px solid var(--line); border-radius:10px; background:#fff; }
+  .note { background:var(--card); border:1px solid var(--line); border-radius:12px; padding:14px 18px; font-size:15px; color:var(--muted); }
+  ol li, ul li { margin:6px 0; }
+  footer { border-top:1px solid var(--line); margin-top:48px; padding:24px 0 40px; color:var(--muted); font-size:15px; }
+</style>
+</head>
+<body>
+<header class="wrap"><a class="brand" href="../../">Tiny Workflows</a></header>
+<main class="wrap">
+  <h1>Sample: a team productivity dashboard from a plain task sheet</h1>
+  <p class="lede">This is a sample built on dummy data (120 tasks, 5 people, 3 milestones) to show the kind of dashboard we build for a client file. It answers three questions on one page: who is on schedule, which milestones are slipping, and where the hours go.</p>
+
+  <img class="shot" src="01-dashboard.png" width="1100" height="760" alt="Sample dashboard: totals (120 tasks, 35 done, 29 percent done, 43 slipping, 15 blocked), a table per owner with open, done, slipping, estimated and logged hours, and a table per milestone with percent done and status">
+
+  <h2>How it works</h2>
+  <ol>
+    <li><strong>Input:</strong> one Tasks sheet with the columns a team already keeps: task, owner, milestone, status, start, due, estimated hours, hours logged.</li>
+    <li><strong>Rule:</strong> a task is <em>slipping</em> when it is not Done and its due date is before today. Slipping rows turn red.</li>
+    <li><strong>Dashboard:</strong> totals, a row per owner (open, done, slipping, estimated vs logged hours, on schedule or not) and a row per milestone (% done, slipping count, status), plus a chart of hours by owner.</li>
+    <li><strong>Upkeep:</strong> it recalculates as you edit. Plain COUNTIFS/SUMIFS formulas, no macros and no add-ins, so it opens in Excel and imports into Google Sheets.</li>
+  </ol>
+
+  <h2>For a client job</h2>
+  <ul>
+    <li>Your column names and your owner and milestone lists.</li>
+    <li>A one-page guide so anyone on your team can drop in the next file.</li>
+    <li>A test record with every delivery: formula errors = 0 and totals checked against a separate count.</li>
+  </ul>
+
+  <p class="note">Sample only: names and numbers are invented. The figures in the picture are as of 17 Nov 2026.</p>
+</main>
+<footer class="wrap">Tiny Workflows. Questions: open a request on our <a href="https://github.com/ceo525/tiny-workflows/issues">support page</a>.</footer>
+</body>
+</html>
